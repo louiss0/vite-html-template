@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+
+  server:
+
+    build: 
+      
+      context: ./dockerfiles
+      
+      dockerfile: server.dockerfile
+
+    volumes:
+    
+      - ./app:/app
+
+  npm:
+    
+    build: 
+      
+      context: ./dockerfiles
+      
+      dockerfile: npm.dockerfile
+    
+    stdin_open: true
+    
+    tty: true
+
+    volumes:
+      - ./app:/app
+
