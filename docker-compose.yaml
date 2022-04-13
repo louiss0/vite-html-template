@@ -41,5 +41,6 @@ services:
 
     volumes:
       
-      - ./app:/app
+      - ./app:/app:delegated
+      
 

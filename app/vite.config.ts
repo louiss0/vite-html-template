@@ -1,4 +1,6 @@
 import {defineConfig} from "vite"
+import WindiCSS from 'vite-plugin-windicss'
+ import pugPlugin from 'vite-plugin-pug'
 
 
 export default defineConfig({
@@ -9,4 +11,8 @@ server: {
       usePolling: true
     }
   },
+  plugins: [
+    pugPlugin(),
+    WindiCSS(),
+  ],
 })
