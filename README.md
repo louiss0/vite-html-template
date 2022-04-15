@@ -40,3 +40,13 @@ export default defineConfig({
 
 > [!Warning]
 > I could not get hmr to work at all automatically it might be that im using windows but please don't get rid of watch at all or the use polling setting that put in it is very important. This means that everytime you make a change you must save the file to see any changes
+
+## Folders and Files
+
+| Folder  | Files                                                         |
+| ------- | ------------------------------------------------------------- |
+| app     | package.json, package-lock.json, tsconfig.json vite.config.ts |
+| layouts | main.pug, home.pug                                            |
+| mixins  | navbar.pug                                                    |
+| src     | main.ts, style.css                                            |
+| pages   | index.html,home.html                                          |

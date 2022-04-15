@@ -1,18 +1,27 @@
 import {defineConfig} from "vite"
 import WindiCSS from 'vite-plugin-windicss'
 import pugPlugin from 'vite-plugin-pug'
-
-
 export default defineConfig({
-server: {
+  server: {
     host: '0.0.0.0',
     port: 3000,
     watch: {
       usePolling: true
     }
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: "./pages/index.html",
+        home: "./pages/home.html"
+      },
+
+    },
+
+  },
   plugins: [
     pugPlugin(),
     WindiCSS(),
+    
   ],
 })
