@@ -1,6 +1,8 @@
 import {defineConfig} from "vite"
 import WindiCSS from 'vite-plugin-windicss'
 import pugPlugin from 'vite-plugin-pug'
+import mpa from 'vite-plugin-mpa' 
+
 export default defineConfig({
   server: {
     host: '0.0.0.0',
@@ -9,19 +11,11 @@ export default defineConfig({
       usePolling: true
     }
   },
-  build: {
-    rollupOptions: {
-      input: {
-        main: "./pages/index.html",
-        home: "./pages/home.html"
-      },
-
-    },
-
-  },
+  
   plugins: [
     pugPlugin(),
     WindiCSS(),
+    mpa({open:false, scanFile:"index.html"})
     
   ],
 })
