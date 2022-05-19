@@ -1,6 +1,7 @@
 import {defineConfig} from "vite"
 import WindiCSS from 'vite-plugin-windicss'
 import pugPlugin from 'vite-plugin-pug'
+import { resolve } from 'path'
 
 export default defineConfig({
   server: {
@@ -12,7 +13,10 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      
+      input: {
+          main: resolve(__dirname, "index.html"),
+          about: resolve(__dirname, "pages/about.html"),
+        }
     },
   },  
   plugins: [
