@@ -2,7 +2,7 @@
 
 
 body {
-    @apply bg-light-50 text-center text-dark-900 leading-tight; 
+    @apply bg-gray-50 text-center text-gray-900 leading-tight; 
 }
 
 
@@ -30,9 +30,12 @@ h6 {
 }
 
 p{
-    @apply leading-relaxed tracking-wider;
+    @apply leading-relaxed tracking-wider max-w-60;
 }
 
+img{
+    @apply w-full object-cover; 
+}
 
 svg {
     @apply w-full h-full fill-current;
