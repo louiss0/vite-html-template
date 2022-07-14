@@ -1,16 +1,20 @@
-
 include ../mixins/navbar.pug
 
+doctype html
+html(lang="en")
+    head
+        block head
+    body 
 
-header 
-    +navbar
+    header 
+        +navbar
 
-    block header
+        block header
 
-main
-    block main
+    main
+        block main
 
-footer
+    footer
 
 
 

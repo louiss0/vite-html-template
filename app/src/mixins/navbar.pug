@@ -18,9 +18,9 @@ mixin navbar
                         
                             li 
 
-                                a(href="/").capitalize #{link}
+                                a.capitalize(href="/") #{link}
                         else 
 
                             li 
                         
-                                a(href=`/pages/${link}.html`).capitalize #{link}
+                                a.capitalize(href=`/src/pages/${link}.pug`) #{link}
